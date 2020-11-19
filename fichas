@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+
+<script>
+   
+
+function getQueryVariable(variable) {
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
+   for (var i=0; i < vars.length; i++) {
+       var pair = vars[i].split("=");
+       if(pair[0] == variable) {
+           return pair[1];
+       }
+   }
+   return false;
+}
+function imprim1(imp1){
+var printContents = document.getElementById('imp1').innerHTML;
+        w = window.open();
+        w.document.write(printContents);
+        w.document.close(); // necessary for IE >= 10
+        w.focus(); // necessary for IE >= 10
+        //Boton desaparece
+    var Obj = document.getElementById("imp");
+    Obj.style.visibility = 'hidden';
+  
+		w.print();
+		w.close();
+        return true;}
+</script>
+</head>
+<body>
+<div id="imp1"><div style="color:#ff0000;padding:12px;margin:12px 0 12px 0;">
+ARBOLES
+</div>
+<!--<div>
+    <button type="button" onclick="alert(getQueryVariable('v1'));">
+        sessionid
+    </button>
+    
+</div>-->
+<div>
+<script>
+document.write('NOMBRE: '+getQueryVariable('v1')+'  ' +getQueryVariable('v2'));</script>
+<br><BR>
+<script>
+document.write('TIPO DE ARBOL: '+getQueryVariable('v3'));
+</script></div><br><BR>
+<!--<img src="https://images.emojiterra.com/openmoji/v12.2/512px/"+<script>document.write(getQueryVariable('v4'))</script>+".png">-->
+<button id="imp" type="button" onclick="javascript:imprim1(imp1);">Imprimir</button>
+
+
+<br>
+
+</body>
+</html>
