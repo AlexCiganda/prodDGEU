@@ -23,9 +23,7 @@ var printContents = document.getElementById('imp1').innerHTML;
         w.document.close(); // necessary for IE >= 10
         w.focus(); // necessary for IE >= 10
         //Boton desaparece
-    var Obj = document.getElementById("imp");
-    Obj.style.visibility = 'hidden';
-  
+     
 		w.print();
 		w.close();
         return true;}
@@ -43,7 +41,7 @@ ARBOLES
 </div>-->
 <div>
 <script>
-document.write('NOMBRE: '+decodeURI(getQueryVariable('v1')+'  ' +getQueryVariable('v2'));</script>
+document.write('NOMBRE: '+decodeURI(getQueryVariable(str('v1'))+'  ' +getQueryVariable('v2'));</script>
 <br><BR>
 <script>
 document.write('TIPO DE ARBOL: '+getQueryVariable('v3'));
