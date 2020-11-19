@@ -17,6 +17,8 @@ function getQueryVariable(variable) {
    return false;
 }
 function imprim1(imp1){
+	
+	
 var printContents = document.getElementById('imp1').innerHTML;
         w = window.open();
         w.document.write(printContents);
@@ -41,7 +43,7 @@ ARBOLES
 </div>-->
 <div>
 <script>
-document.write('NOMBRE: '+decodeURI(getQueryVariable(str('v1'))+'  ' +getQueryVariable('v2'));</script>
+document.write('NOMBRE: '+decodeURI(getQueryVariable('v1')+'  ' +getQueryVariable('v2'));</script>
 <br><BR>
 <script>
 document.write('TIPO DE ARBOL: '+getQueryVariable('v3'));
